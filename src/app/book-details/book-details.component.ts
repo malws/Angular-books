@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 import { BooksService } from '../books.service';
 
 @Component({
@@ -17,7 +16,6 @@ export class BookDetailsComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private booksService: BooksService,
-    private location: Location
   ) { }
 
   ngOnInit(): void {

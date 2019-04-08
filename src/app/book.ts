@@ -2,6 +2,6 @@ export class Book {
     id: number;
     title: string;
     author: string;
-    img: File;
+    img: string;
     summary: string;
 }

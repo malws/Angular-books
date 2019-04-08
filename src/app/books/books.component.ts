@@ -44,10 +44,10 @@ onSubmit() {
     (document.querySelector('#modal') as HTMLElement).style.display = "none";
   }
 
-  add(title: string, author:string, summary: string): void {
+  add(title: string, author:string, img:string, summary: string): void {
     title = title.trim();
     if (!title) { return; }
-    this.booksService.addBook({ title, author, summary } as Book)
+    this.booksService.addBook({ title, author, img, summary } as Book)
       .subscribe(book => {
         this.books.push(book);     
         this.books.sort((a,b) => a.title.localeCompare(b.title));  

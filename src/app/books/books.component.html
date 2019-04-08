@@ -9,19 +9,13 @@
     <label>Author:
         <input #author />
       </label>
-    <label>summary:
-        <input #bookSummary />
+      <label>Image:
+        <input #image />
       </label>
-      <h3>Choose File</h3>
-            <form (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <input type="file" name="image"  />
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-    <button (click)="add(bookTitle.value, author.value, bookSummary.value); bookTitle.value=''; bookSummary.value=''">
+    <label>summary:
+        <input type="textarea" #bookSummary />
+      </label>
+    <button (click)="add(bookTitle.value, author.value, image.value, bookSummary.value); bookTitle.value=''; image.value=''; bookSummary.value=''">
       add
     </button>
     </div>
