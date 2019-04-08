@@ -1,0 +1,10 @@
+<div *ngIf="book">
+    <h5>{{book.author}}</h5>
+    <h2>{{book.title | uppercase}}</h2>   
+    <img class='book-img' src='{{book.img}}' alt='{{book.title}}'/> 
+    <article>
+      {{book.img}}
+      {{book.summary}}
+    </article>
+</div>
+<button (click)="goBack()">go back</button>

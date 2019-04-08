@@ -1,0 +1,39 @@
+<div id="modal">
+  <div class="modal-content">
+    <button (click)="close()">
+        X
+      </button>
+    <label>Book title:
+      <input #bookTitle />
+    </label>
+    <label>Author:
+        <input #author />
+      </label>
+    <label>summary:
+        <input #bookSummary />
+      </label>
+      <h3>Choose File</h3>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="file" name="image"  />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+    <button (click)="add(bookTitle.value, author.value, bookSummary.value); bookTitle.value=''; bookSummary.value=''">
+      add
+    </button>
+    </div>
+</div>
+
+<button (click)="open()">+</button>
+<ul class="books">
+  <li *ngFor="let book of books" [class.selected]="book === selectedBook" (click)="onSelect(book)">
+    <a routerLink="/details/{{book.id}}">
+      {{book.title}}
+    </a>
+      <button class="delete" title="delete book"
+      (click)="delete(book)">x</button>
+  </li>
+</ul>
