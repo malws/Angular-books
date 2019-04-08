@@ -1,9 +1,11 @@
-.app-content {
-  display: grid;
-  grid-template-columns: 250px auto;
-  grid-column-gap: 30px;
-}
+@media (min-width:795px) {
+  .app-content {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-column-gap: 30px;
+  }
 
-app-books {
-  grid-column: 1;
+  app-books {
+    grid-column: 1;
+  }
 }

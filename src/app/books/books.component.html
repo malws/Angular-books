@@ -13,7 +13,7 @@
         <input #image />
       </label>
     <label>summary:
-        <input type="textarea" #bookSummary />
+        <textarea #bookSummary>Book summary</textarea>
       </label>
     <button (click)="add(bookTitle.value, author.value, image.value, bookSummary.value); bookTitle.value=''; image.value=''; bookSummary.value=''">
       add

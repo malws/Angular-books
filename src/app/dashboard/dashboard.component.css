@@ -1,7 +1,9 @@
-:host {
-  grid-column: 2;
-  grid-row:1;
-}    
+@media (min-width:795px) {
+  :host {
+    grid-column: 2;
+    grid-row:1;
+  }    
+}
     
     /* DashboardComponent's private CSS styles */
     [class*='col-'] {
