@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<button (click)="open()">+</button>
+<button class="add-btn" (click)="open()">+</button>
 <ul class="books">
   <li *ngFor="let book of books" [class.selected]="book === selectedBook" (click)="onSelect(book)">
     <a routerLink="/details/{{book.id}}">
